@@ -10,15 +10,31 @@
         <h1>Tela Login</h1>
     </header>
     <main>
-        <input type="text" id="nome">
+        <input type="text" id="nome" placeholder="Digite seu nome...">
         <br>
-        <input type="text" id="nome">
+        <input type="text" id="email" placeholder="Digite seu email...">
         <br>
-        <script>
-            
-        </script>
-        <button><a href="./home.html">Avançar</a></button>
+        <button onclick="verifDados()">Avançar</button>
         <button><a href="./index.html">Voltar</a></button>
+        <script>
+            function verifDados() {
+                const nome_login = "Gabriel"
+                const email_login = "gabiss@gmail.com"
+                const nome = document.querySelector("#nome")
+                const email = document.querySelector("#email")
+                if (nome.value === nome_login){
+                    console.log(`Nome correto! Parabéns`)
+                } else {
+                    console.log(`O Nome correto seria ${nome_login}`)
+                }
+                if (email.value === email_login){
+                    console.log(`Email correto! Parabéns`)
+                    window.location.href = "./index.html"
+                } else {
+                    console.log(`O Email correto seria ${email_login}`)
+                }
+            }
+        </script>
     </main>
     <footer>
         &copy;Outros direitos do Gabiss
