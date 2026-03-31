@@ -16,22 +16,18 @@
         <br>
         <button onclick="verifDados()">Avançar</button>
         <button><a href="./index.html">Voltar</a></button>
+        <p id="msg"></p>
         <script>
             function verifDados() {
                 const nome_login = "Gabriel"
                 const email_login = "gabiss@gmail.com"
                 const nome = document.querySelector("#nome")
                 const email = document.querySelector("#email")
-                if (nome.value === nome_login){
-                    console.log(`Nome correto! Parabéns`)
+                const msg = document.querySelector("#msg")
+                if (nome.value === nome_login && email.value === email_login){
+                    window.location.href = "./home.html"
                 } else {
-                    console.log(`O Nome correto seria ${nome_login}`)
-                }
-                if (email.value === email_login){
-                    console.log(`Email correto! Parabéns`)
-                    window.location.href = "./index.html"
-                } else {
-                    console.log(`O Email correto seria ${email_login}`)
+                    msg = "Login incorreto!"
                 }
             }
         </script>
