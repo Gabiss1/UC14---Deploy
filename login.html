@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Tela Login</h1>
+    </header>
+    <main>
+        <input type="text" id="nome" placeholder="Digite seu nome...">
+        <br>
+        <input type="text" id="email" placeholder="Digite seu email...">
+        <br>
+        <button onclick="verifDados()">Avançar</button>
+        <button><a href="./index.html">Voltar</a></button>
+        <p id="msg"></p>
+        <script>
+            function verifDados() {
+                const nome_login = "Gabriel"
+                const email_login = "gabiss@gmail.com"
+                const nome = document.querySelector("#nome")
+                const email = document.querySelector("#email")
+                const msg = document.querySelector("#msg")
+                if (nome.value === nome_login && email.value === email_login){
+                    window.location.href = "./home.html"
+                } else {
+                    msg = "Login incorreto!"
+                }
+            }
+        </script>
+    </main>
+    <footer>
+        &copy;Outros direitos do Gabiss
+    </footer>
+</body>
+</html>
